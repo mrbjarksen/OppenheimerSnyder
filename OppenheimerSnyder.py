@@ -15,7 +15,7 @@ class OppenheimerSnyder(Scene):
         Group(rect1, rect2).arrange(buff=buff).to_edge(DOWN, buff=buff)
         self.add(rect1, rect2)
 
-        header = Tex("Observer on surface", "Distant observer")
+        header = Tex("Athugandi á yfirborði", "Fjarlægur athugandi", tex_template=TexTemplateLibrary.default)
         header.set_y(mid(rect1.get_top()[1], self.camera.frame_height/2) - 0.05)
         header[0].set_x(rect1.get_x())
         header[1].set_x(rect2.get_x())
@@ -74,7 +74,7 @@ class OppenheimerSnyderSurface(Scene):
         Group(rect1, rect2).arrange(buff=buff).to_edge(DOWN, buff=buff)
         self.add(rect1, rect2)
 
-        header = Tex("Observer on surface", "Distant observer")
+        header = Tex("Athugandi á yfirborði", "Fjarlægur athugandi", tex_template=TexTemplateLibrary.default)
         header.set_y(mid(rect1.get_top()[1], self.camera.frame_height/2) - 0.05)
         header[0].set_x(rect1.get_x())
         header[1].set_x(rect2.get_x())
@@ -127,7 +127,7 @@ class OppenheimerSnyderDistant(Scene):
         Group(rect1, rect2).arrange(buff=buff).to_edge(DOWN, buff=buff)
         self.add(rect1, rect2)
 
-        header = Tex("Observer on surface", "Distant observer")
+        header = Tex("Athugandi á yfirborði", "Fjarlægur athugandi", tex_template=TexTemplateLibrary.default)
         header.set_y(mid(rect1.get_top()[1], self.camera.frame_height/2) - 0.05)
         header[0].set_x(rect1.get_x())
         header[1].set_x(rect2.get_x())
@@ -163,7 +163,7 @@ class OppenheimerSnyderDistant(Scene):
 
         self.play(
             tau.animate.set_value(60),
-            run_time=60, rate_func=rate_functions.linear
+            run_time=60/1.5, rate_func=rate_functions.linear
         )
 
         self.wait(0.5)
